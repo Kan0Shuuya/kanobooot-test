@@ -45,7 +45,7 @@ cur.execute("""CREATE TABLE IF NOT EXISTS users (
     amountDraw BIGINT DEFAULT (0) 
 )""")
 
-bot = TelegramClient('@KanoShuuya', scret.API_ID, scret.API_HASH, connection=connection.http.ConnectionHttp, proxy=(socks.HTTP, '127.0.0.1', 80)).start(bot_token=scret.API_TOKEN)
+bot = TelegramClient('@KanoShuuya', scret.API_ID, scret.API_HASH).start(bot_token=scret.API_TOKEN)
 
 @bot.on(events.NewMessage(pattern='/messageMethod'))
 async def rep_minus(msg):
